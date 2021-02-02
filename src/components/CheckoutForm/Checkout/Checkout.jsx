@@ -26,7 +26,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
             }
         }
         generateToken();
-    }, [cart]);
+    }, [history , cart]);
 
     const nextStep = () => setActiveStep((prevActiveStep) => prevActiveStep + 1);
     const backStep = () => setActiveStep((prevActiveStep) => prevActiveStep - 1);
