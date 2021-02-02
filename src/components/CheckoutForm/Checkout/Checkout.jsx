@@ -43,7 +43,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
         }, 3000);
     }
 
-    let Confirmation = () => order.customer ? (
+    let Confirmation = () => (order.customer ? (
         <>
             <div>
                 <Typography variant="h5">Ďakujeme Vám za Vašu objednávku, {order.customer.firstname} {order.customer.lastname}</Typography>
@@ -66,7 +66,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
         <div className={classes.spinner}>
             <CircularProgress />
         </div>
-    );
+    ));
     if(error){
         <>
             <Typography variant="h5">Error: {error}</Typography>
